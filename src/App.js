@@ -3,6 +3,8 @@ import './App.css';
 import Title from './components/Title';
 import Logo from './components/Logo';
 import Albums from './components/Albums';
+import AddAlbum from './components/AddAlbum';
+
 
 class App extends Component {
   
@@ -12,7 +14,7 @@ class App extends Component {
   // }
   render() {
     return (
-      <div>
+      <div className="center-main">
         <div className="App">
         <Title/>
        </div>
@@ -27,8 +29,9 @@ class App extends Component {
          <Logo/>
         </div>
 
-        <div>
-          <Albums/>
+        <div className="center-albs">
+          <Albums />
+          <AddAlbum/>
         </div>
 
         <div className="App">

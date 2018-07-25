@@ -27,3 +27,14 @@
   height: 80px;
   width: 80px;
 }
+
+.center-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.center-albs {
+  text-align: center;
+}

@@ -62,21 +62,22 @@ class Albums extends Component {
       return (
         this.state.albums.map((e, i) => {
           return (
-            <h2 
-            key={i}>
-            {e.artist}<br />
-            {e.album}<br />
-            {e.year}<br/>
-            <button onClick={() => this.handleDelete(e.id-1)}>Delete Item</button>
-            <form>
-              <input placeholder="update artist" onChange={(e) => this.handleArtistChange(e.target.value)}></input>
-              <input placeholder="update album" onChange={(e) => this.handleAlbumChange(e.target.value)}></input>
-              <input placeholder="update year" onChange={(e) => this.handleYearChange(e.target.value)}></input>
-              <button onClick={() => this.handleUpdate(e.id-1)}>Update Album Info</button>
-            </form>
+            <h2
+              key={i}>
+              {e.artist}<br />
+              {e.album}<br />
+              {e.year}<br />
+              <button onClick={() => this.handleDelete(e.id - 1)}>Delete Item</button>
+              <div>
+                <input placeholder="update artist" onChange={(e) => this.handleArtistChange(e.target.value)}></input>
+                <input placeholder="update album" onChange={(e) => this.handleAlbumChange(e.target.value)}></input>
+                <input placeholder="update year" onChange={(e) => this.handleYearChange(e.target.value)}></input>
+                <button onClick={() => this.handleUpdate(e.id - 1)}>Update Album Info</button>
+              </div>
             </h2>
           )
         })
+
       )
     } else {
       return (null)
